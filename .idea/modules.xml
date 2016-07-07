@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/nifi-googlegeocode-bundle.iml" filepath="$PROJECT_DIR$/nifi-googlegeocode-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nifi-googlegeocode-nar/nifi-googlegeocode-nar.iml" filepath="$PROJECT_DIR$/nifi-googlegeocode-nar/nifi-googlegeocode-nar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nifi-googlegeocode-processors/nifi-googlegeocode-processors.iml" filepath="$PROJECT_DIR$/nifi-googlegeocode-processors/nifi-googlegeocode-processors.iml" />
+    </modules>
+  </component>
+</project>
