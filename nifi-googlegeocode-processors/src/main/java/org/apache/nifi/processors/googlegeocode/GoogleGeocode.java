@@ -24,8 +24,6 @@ import org.apache.nifi.processors.googlegeocode.util.GoogleGeocodeURLBuilder;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -94,7 +92,7 @@ public class GoogleGeocode extends AbstractProcessor {
     }
 
     @OnStopped
-    public void closeReader() throws IOException {
+    public void closeService() throws IOException {
         //TODO
     }
 
@@ -140,7 +138,6 @@ public class GoogleGeocode extends AbstractProcessor {
             e.printStackTrace();
             session.transfer(flowFile, REL_NOT_FOUND);
             getLogger().warn("Failure while trying to find coordinates for {} due to {}", new Object[]{flowFile, e}, e);
-            getLogger().warn(urlBuilder.getFormattedAddress());
             return;
         }
 
@@ -154,7 +151,7 @@ public class GoogleGeocode extends AbstractProcessor {
         session.read(flowFile, new InputStreamCallback() {
             @Override
             public void process(InputStream in) throws IOException {
-                try{
+                try {
                     String inputJson = IOUtils.toString(in);
                     json[0] = new JSONObject(inputJson);
                     JSONObject locationType = new JSONObject();
@@ -163,7 +160,7 @@ public class GoogleGeocode extends AbstractProcessor {
                     coordinates.put(finalResults[0].geometry.location);
                     locationType.put("coordinates: ", coordinates);
                     json[0].put("location_1", locationType);
-                }catch(Exception ex){
+                } catch (Exception ex) {
                     ex.printStackTrace();
                     getLogger().error("Failed to read json string.");
                 }

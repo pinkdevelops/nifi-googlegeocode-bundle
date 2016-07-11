@@ -2,36 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd00b401-9acf-4f33-a109-97eeffc79d36" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/commons-codec-1.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/httpasyncclient-4.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/httpclient-4.4.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/httpcore-4.4.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/httpcore-nio-4.4.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/httpmime-4.5.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/json-20160212.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/unirest-java-1.4.9.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/nifi-googlegeocode-processors-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/bundled-dependencies/nifi-googlegeocode-processors-1.0-SNAPSHOT.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/nifi-googlegeocode-nar-1.0-SNAPSHOT.nar" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/nifi-googlegeocode-nar-1.0-SNAPSHOT.nar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/classes/org/apache/nifi/processors/googlegeocode/GoogleGeocode.class" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/classes/org/apache/nifi/processors/googlegeocode/GoogleGeocode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/classes/org/apache/nifi/processors/googlegeocode/util/GoogleGeocodeURLBuilder.class" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/classes/org/apache/nifi/processors/googlegeocode/util/GoogleGeocodeURLBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/nifi-googlegeocode-processors-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/nifi-googlegeocode-processors-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/nifi-googlegeocode-nar.iml" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/nifi-googlegeocode-nar.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/classes/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/test-classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/nifi-googlegeocode-nar/target/test-classes/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/nifi-googlegeocode-processors.iml" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/nifi-googlegeocode-processors.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/pom.xml" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/GoogleGeocode.java" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/GoogleGeocode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/util/GoogleGeocodeURLBuilder.java" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/util/GoogleGeocodeURLBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/classes/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/maven-shared-archive-resources/META-INF/DEPENDENCIES" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/surefire-reports/TEST-org.apache.nifi.processors.googlegeocode.MyProcessorTest.xml" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/surefire-reports/TEST-org.apache.nifi.processors.googlegeocode.MyProcessorTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/surefire-reports/org.apache.nifi.processors.googlegeocode.MyProcessorTest.txt" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/surefire-reports/org.apache.nifi.processors.googlegeocode.MyProcessorTest.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/test-classes/META-INF/DEPENDENCIES" afterPath="$PROJECT_DIR$/nifi-googlegeocode-processors/target/test-classes/META-INF/DEPENDENCIES" />
     </list>
     <ignored path="nifi-googlegeocode-bundle.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,12 +51,12 @@
       <file leaf-file-name="GoogleGeocode.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/GoogleGeocode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
+            <state relative-caret-position="1050">
+              <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7596#7800#0" expanded="true" />
-                <element signature="e#7799#7800#0" expanded="true" />
+                <element signature="e#7535#7739#0" expanded="true" />
+                <element signature="e#7738#7739#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,17 +92,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyProcessorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java">
+      <file leaf-file-name="TestGoogleGeocode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
               <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#1219#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1087#1088#0" expanded="false" />
-                <element signature="e#1162#1163#0" expanded="false" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="74" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -159,6 +137,8 @@
         <option value="$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java" />
         <option value="$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/util/GoogleGeocodeURLBuilder.java" />
         <option value="$PROJECT_DIR$/nifi-googlegeocode-processors/pom.xml" />
+        <option value="$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/GoogleGeocode.java" />
       </list>
     </option>
@@ -281,14 +261,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -317,40 +289,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="googlegeocode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nifi-googlegeocode-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nifi-googlegeocode-bundle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nifi-googlegeocode-processors" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="googlegeocode" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -634,8 +572,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -664,16 +602,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1219#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1087#1088#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -699,8 +632,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -729,16 +662,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1219#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1087#1088#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -764,8 +692,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -794,16 +722,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1219#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1087#1088#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,8 +752,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -859,16 +782,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java">
+    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1219#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1087#1088#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -894,8 +812,8 @@
           <caret line="179" column="31" selection-start-line="179" selection-start-column="31" selection-end-line="179" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -930,8 +848,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -966,8 +884,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -979,19 +897,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/MyProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#1219#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1087#1088#0" expanded="false" />
-            <element signature="e#1162#1163#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,14 +932,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/test/java/org/apache/nifi/processors/googlegeocode/TestGoogleGeocode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="74" selection-start-line="2" selection-start-column="74" selection-end-line="2" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nifi-googlegeocode-processors/src/main/java/org/apache/nifi/processors/googlegeocode/GoogleGeocode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="143" column="19" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
+        <state relative-caret-position="1050">
+          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7596#7800#0" expanded="true" />
-            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7535#7739#0" expanded="true" />
+            <element signature="e#7738#7739#0" expanded="true" />
           </folding>
         </state>
       </provider>
