@@ -4,10 +4,10 @@ package org.apache.nifi.processors.googlegeocode;
  * Created by dpinkston on 6/24/16.
  */
 
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.JsonNode;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
+import com.google.maps.GeoApiContext;
+import com.google.maps.GeocodingApi;
+import com.google.maps.model.GeocodingResult;
+import org.apache.commons.io.IOUtils;
 import org.apache.nifi.annotation.behavior.*;
 import org.apache.nifi.annotation.behavior.InputRequirement.Requirement;
 import org.apache.nifi.annotation.documentation.CapabilityDescription;
@@ -17,10 +17,18 @@ import org.apache.nifi.components.PropertyDescriptor;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.processor.*;
 import org.apache.nifi.processor.exception.ProcessException;
+import org.apache.nifi.processor.io.InputStreamCallback;
+import org.apache.nifi.processor.io.OutputStreamCallback;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.processors.googlegeocode.util.GoogleGeocodeURLBuilder;
 import org.json.JSONArray;
+import org.json.JSONObject;
+
+
+
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.*;
 
 
@@ -87,7 +95,7 @@ public class GoogleGeocode extends AbstractProcessor {
 
     @OnStopped
     public void closeReader() throws IOException {
-        Unirest.shutdown();
+        //TODO
     }
 
     @Override
@@ -108,68 +116,70 @@ public class GoogleGeocode extends AbstractProcessor {
     @Override
     public void onTrigger(final ProcessContext context, final ProcessSession session) throws ProcessException {
         FlowFile flowFile = session.get();
+        final JSONObject[] json = {new JSONObject()};
         if (flowFile == null) {
             return;
         }
 
-        getLogger().warn("grabbing values");
-
-        HttpResponse<JsonNode> geocodeResponse;
         final String addressAttributeName = context.getProperty(ADDRESS_ATTRIBUTE).getValue();
         final String addressAttributeValue = flowFile.getAttribute(addressAttributeName);
-        getLogger().warn(addressAttributeValue);
         final String cityAttributeName = context.getProperty(CITY_ATTRIBUTE).getValue();
         final String cityAttributeValue = flowFile.getAttribute(cityAttributeName);
-        getLogger().warn(cityAttributeValue);
         final String stateAttributeName = context.getProperty(STATE_ATTRIBUTE).getValue();
         final String stateAttributeValue = flowFile.getAttribute(stateAttributeName);
-        getLogger().warn(stateAttributeValue);
         final String apiKeyAttributeValue = context.getProperty(GOOGLE_GEOCODE_API_KEY).getValue();
-        getLogger().warn("api Key: " + apiKeyAttributeValue);
 
         GoogleGeocodeURLBuilder urlBuilder = new GoogleGeocodeURLBuilder(addressAttributeValue, cityAttributeValue,
                 stateAttributeValue, apiKeyAttributeValue);
 
+        GeoApiContext geoApiContext = new GeoApiContext().setApiKey(apiKeyAttributeValue);
+        GeocodingResult[] results;
         try {
-            geocodeResponse = Unirest.get(urlBuilder.getGoogleGeocodeURL())
-                    .header("accept", "application/json")
-                    .asJson();
-        } catch (UnirestException e) {
+            results = GeocodingApi.geocode(geoApiContext, urlBuilder.getFormattedAddress()).await();
+        } catch (Exception e) {
             e.printStackTrace();
             session.transfer(flowFile, REL_NOT_FOUND);
             getLogger().warn("Failure while trying to find coordinates for {} due to {}", new Object[]{flowFile, e}, e);
-            getLogger().warn(urlBuilder.getGoogleGeocodeURL());
+            getLogger().warn(urlBuilder.getFormattedAddress());
             return;
-
         }
 
-
-
-        getLogger().warn(geocodeResponse.getBody().toString());
-
         //geocodeResponse.getStatus error routing/relationships
-        if (geocodeResponse == null) {
+        if (results == null) {
             session.transfer(flowFile, REL_NOT_FOUND);
             return;
         }
 
-        final Map<String, String> attrs = new HashMap<>();
+        final GeocodingResult[] finalResults = results;
+        session.read(flowFile, new InputStreamCallback() {
+            @Override
+            public void process(InputStream in) throws IOException {
+                try{
+                    String inputJson = IOUtils.toString(in);
+                    json[0] = new JSONObject(inputJson);
+                    JSONObject locationType = new JSONObject();
+                    locationType.put("type", "Point");
+                    JSONArray coordinates = new JSONArray();
+                    coordinates.put(finalResults[0].geometry.location);
+                    locationType.put("coordinates: ", coordinates);
+                    json[0].put("location_1", locationType);
+                }catch(Exception ex){
+                    ex.printStackTrace();
+                    getLogger().error("Failed to read json string.");
+                }
+            }
+        });
 
-        final Double latitude = geocodeResponse.getBody().getObject().getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").getDouble("lat");
-        final Double longitude = geocodeResponse.getBody().getObject().getJSONArray("results").getJSONObject(0).getJSONObject("geometry").getJSONObject("location").getDouble("lng");
+        // To write the results back out ot flow file
+        flowFile = session.write(flowFile, new OutputStreamCallback() {
 
-        if (latitude != null && longitude != null) {
-            attrs.put("$.location_1.coordinates", new JSONArray().put(latitude).put(longitude).toString());
-        }
-        getLogger().warn("coords: " + latitude + ", " + longitude);
-        Double coordinates[] = {latitude,longitude};
-        getLogger().warn("second coords: " + coordinates.toString());
+            @Override
+            public void process(OutputStream out) throws IOException {
+                out.write(json[0].toString().getBytes());
+            }
+        });
 
-
-        attrs.put("$.location_1.type", "Point");
-        attrs.put("$.location_1.coordinates", coordinates.toString());
-        flowFile = session.putAllAttributes(flowFile, attrs);
         session.transfer(flowFile, REL_FOUND);
     }
-
 }
+

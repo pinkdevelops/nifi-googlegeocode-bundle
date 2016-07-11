@@ -10,9 +10,6 @@ public class GoogleGeocodeURLBuilder {
     private String address;
     private String city;
     private String state;
-    private String apiKey;
-    private final String baseURL = "https://maps.googleapis.com/maps/api/geocode/json?address=";
-
 
     public GoogleGeocodeURLBuilder(){}
 
@@ -20,7 +17,6 @@ public class GoogleGeocodeURLBuilder {
         this.address = address.trim().replaceAll("\\s", "+");
         this.city = city.trim().replaceAll("\\s", "+");
         this.state = state.trim();
-        this.apiKey = apiKey.trim();
     }
 
     public String getAddress() {
@@ -47,20 +43,9 @@ public class GoogleGeocodeURLBuilder {
         this.state = state;
     }
 
-    public String getApiKey() {
-        return apiKey;
-    }
-
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
-    }
-
-    public String getGoogleGeocodeURL(){
+    public String getFormattedAddress(){
         StringBuilder sb = new StringBuilder();
-        sb.append(this.baseURL).append(this.address).append(",+").append(this.city).append(",+").append(this.state).append("&key=").append(this.apiKey);
+        sb.append(this.address).append(" ").append(this.city).append(", ").append(this.state);
         return sb.toString();
-
     }
-
-
 }
