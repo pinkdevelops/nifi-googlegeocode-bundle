@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -9,17 +9,20 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="nifi-googlegeocode-processors" />
-    <orderEntry type="library" name="Maven: com.google.maps:google-maps-services:0.1.15" level="project" />
+    <orderEntry type="library" name="Maven: com.google.maps:google-maps-services:0.1.17" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.7" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.okhttp:okhttp:2.7.5" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.okio:okio:1.6.0" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.8.2" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20160212" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.nifi:nifi-processor-utils:0.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.nifi:nifi-utils:0.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.nifi:nifi-security-utils:0.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.nifi:nifi-processor-utils:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.nifi:nifi-utils:1.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.nifi:nifi-api:1.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.nifi:nifi-security-utils:1.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.4" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.55" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.55" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-core:1.10.19" level="project" />
