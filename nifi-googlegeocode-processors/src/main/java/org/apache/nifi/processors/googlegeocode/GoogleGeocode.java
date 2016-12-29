@@ -18,6 +18,7 @@ package org.apache.nifi.processors.googlegeocode;
 
 import com.google.maps.GeoApiContext;
 import com.google.maps.GeocodingApi;
+import com.google.maps.model.AddressComponent;
 import com.google.maps.model.GeocodingResult;
 import org.apache.commons.io.IOUtils;
 import org.apache.nifi.annotation.behavior.*;
@@ -29,12 +30,9 @@ import org.apache.nifi.components.PropertyDescriptor;
 import org.apache.nifi.flowfile.FlowFile;
 import org.apache.nifi.processor.*;
 import org.apache.nifi.processor.exception.ProcessException;
-import org.apache.nifi.processor.io.InputStreamCallback;
-import org.apache.nifi.processor.io.OutputStreamCallback;
 import org.apache.nifi.processor.io.StreamCallback;
 import org.apache.nifi.processor.util.StandardValidators;
 import org.apache.nifi.processors.googlegeocode.util.GoogleGeocodeURLBuilder;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -124,6 +122,7 @@ public class GoogleGeocode extends AbstractProcessor {
         this.propertyDescriptors = Collections.unmodifiableList(props);
     }
 
+
     @Override
     public void onTrigger(final ProcessContext context, final ProcessSession session) throws ProcessException {
         FlowFile flowFile = session.get();
@@ -161,6 +160,17 @@ public class GoogleGeocode extends AbstractProcessor {
             @Override
             public void process(final InputStream in, final OutputStream out) throws IOException {
                 JSONObject obj = new JSONObject(IOUtils.toString(in));
+                for (AddressComponent address_component : results[0].addressComponents){
+                    switch (address_component.types[0].toString()){
+                        case "route": obj.put("route", address_component.longName);
+                        case "street_number": obj.put("street_number", address_component.longName);
+                        case "locality": obj.put("locality", address_component.longName);
+                        case "administrative_area_level_2": obj.put("administrative_area_level_2", address_component.longName);
+                        case "administrative_area_level_1": obj.put("administrative_area_level_1", address_component.longName);
+                        case "country": obj.put("country", address_component.longName);
+                        case "postal_code": obj.put("postal_code", address_component.longName);
+                    }
+                }
                 obj.put("formatted_address", results[0].formattedAddress);
                 obj.put("location", results[0].geometry.location);
                 out.write(obj.toString().getBytes());
